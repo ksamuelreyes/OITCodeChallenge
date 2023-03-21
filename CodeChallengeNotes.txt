@@ -1,0 +1,89 @@
+(I'm sorry these notes are a mess. Hopefully my thought process is visible throughout)
+Code thought process:
+
+Start with Roman numeral to decimal number function.
+
+Starting with the first Roman numeral take the characters in pairs.
+
+If the next character is the same as the first add the first
+If the next character is greater than the first, subtract the first
+If the next character is less than the first, add the first
+
+I ran into a problem where romanString[i+1] was throwing an error when romanString[i] was on the last index
+as there is no [i+1] on the last index
+
+I changed it so the program started on the second character [i] and compared it to the first [i-1] with similar logic to above:
+
+If the second character is greater than the first, subtract the first number.
+Otherwise, add the first character.
+
+However, after this change, I realized that the program was not adding the final number. So I added
+added the condition that if i was the position in the string, to add i to the total sum.
+
+This function is working now.
+
+
+
+Next the Decimal to Roman numeral.
+
+I found this one much more difficult.
+
+Although I'm sure there is a shorter way to do it, I found the easiest way for me was to come up will all combinations of roman numerals
+I created the following list
+
+M = 1000
+CM = 900
+D = 500
+CD = 400
+C = 100
+XC = 90
+L = 50
+XL = 40
+X = 10
+IX = 9
+V = 5
+IV = 4
+I = 1
+
+I can now take the input number, and break it down based on its largest units.
+
+Using the example of 1555
+
+I check to see if it is greater than 1000
+
+Because it is, I divide by 1000
+
+1555/1000 = 1
+
+This is how many M's I include
+
+Then I determine the remainder using 1555 %= 1000
+
+I'm left with 555
+
+I then check if I can divide by 900 (which I can't) so I move onto the next
+
+500 is only ever included once (or else it would be 1000) so I add a "D"
+
+I continue on this way until the number has been processed all the way through...
+
+
+
+Now all there is to do is give the option to continue and create a way to input which function you want to use.
+These can be solved with loops and an if statement.
+
+Then I added a few more loops so that incorrect inputs don't exit the program.
+
+
+
+Things I would improve given more time:
+1. There is a certain level of input validation on selecting options, but not every input is checked for validity 
+before continuing. I would make sure that this was taken care of.
+
+2. I would love to integrate this into a web app, but given the time parameters
+I thought a console app was the best choice.
+
+3. I'm sure there is a much better way to write the DecimaltoRoman() method. I felt like using if statements was 
+inefficient and a little messy. I think I would go back and improve this given more time.
+
+4. I would have made better notes.
