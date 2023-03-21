@@ -12,8 +12,6 @@ Program.cs - This file includes all of the source code for the program.
 
 CodeChallengeNotes.txt - This text document includes all the notes I created as I developed the program. I tried my best to show my line of thinking.
 
-OITCodeChallenge.sln - In case you want to open the Visual Studio file
-
 As requested in the email, the programming portion of this challenge took around three hours from start to finish. This includes brainstorming and outlining.
 The rest of the time I spend commenting code, refining notes, and organizing the repository.
 
