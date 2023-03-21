@@ -171,7 +171,7 @@ namespace OITCodeChallenge
 
             if (decInput >= 40)
             {
-                romanOutput += "CD";
+                romanOutput += "XL";
                 decInput %= 40;
             }
             
